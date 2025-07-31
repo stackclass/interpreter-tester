@@ -12,17 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-mod definition;
-mod stages;
-
-use std::process::ExitCode;
-
-fn main() -> ExitCode {
-    // Collect all environment variables into a HashMap
-    let env = std::env::vars().collect();
-    // Build the definition from the definition module
-    let definition = definition::build();
-
-    // Run the tester
-    tester::run(env, definition)
-}
+pub mod iz6;
+pub mod lv1;
+pub mod oq9;
